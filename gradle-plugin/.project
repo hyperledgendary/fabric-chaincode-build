@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>fabic-java-chaincode-package</name>
+	<name>fabric-java-chaincode-package</name>
 	<comment>Project gradle-plugin created by Buildship.</comment>
 	<projects>
 	</projects>

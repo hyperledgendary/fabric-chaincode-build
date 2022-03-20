@@ -7,14 +7,30 @@ plugins {
     id 'application'
     id 'checkstyle'
     id 'jacoco'
+    id 'org.hyperledger.fabric.chaincodepackage' version '0.0.1-SNAPSHOT'
 }
 
+chaincodePackage {
+    connectionJSON 'fred.json'
+    host 'fred.com:9999'
+
+    customData {
+        websiteURL = 'https://gradle.org'
+    }
+
+}
+
+
+    
 group 'org.hyperledger.fabric.samples'
 version '1.0-SNAPSHOT'
 
 dependencies {
     
     compileOnly 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.+'
+    
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20211205'
 
     testImplementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.+'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'
